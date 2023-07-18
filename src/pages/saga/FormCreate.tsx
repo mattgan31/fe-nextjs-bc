@@ -58,7 +58,8 @@ export default function FormCreate(props: Props) {
           name="name"
           id="name"
           value={formik.values.name}
-          className="text-black"
+          className="text-black border-gray-400 border-2 rounded-md mx-2 px-2"
+          placeholder='Region name'
           onChange={formik.handleChange}
         />
       </div>
@@ -72,7 +73,7 @@ export default function FormCreate(props: Props) {
           ) : (
             <>
               <img src={previewImg} alt="img" />
-              <span onClick={onClear}>Remove</span>
+              <button className='rounded-md bg-red-600 text-white w-24 my-2 mx-1' onClick={onClear}>Remove</button>
             </>
           )}
         </div>
@@ -83,15 +84,16 @@ export default function FormCreate(props: Props) {
               id="file-upload"
               name="file-upload"
               type="file"
+              className="text-black border-gray-400 border-2 rounded-md mx-2 px-2"
               onChange={uploadConfig()}
             />
           </label>
         </div>
         <div>
-          <button type="submit" onClick={formik.handleSubmit}>
+          <button className='rounded-md bg-green-600 text-white w-24 my-2 mx-1' type="submit" onClick={formik.handleSubmit}>
             Simpan
           </button>
-          <button type="button" onClick={() => props.setDisplay(false)}>
+          <button className='rounded-md bg-red-600 text-white w-24 my-2 mx-1' type="button" onClick={() => props.setDisplay(false)}>
             Cancel
           </button>
         </div>

@@ -38,16 +38,17 @@ export default function FormUpdate(props: Props) {
           name="name"
           id="name"
           value={formik.values.name}
-          className="text-black"
+          className="text-black border-gray-400 border-2 rounded-md mx-2 px-2"
+          placeholder='Region Name'
           onChange={formik.handleChange}
         />
       </div>
       <div>
         <div>
-          <button type="submit" onClick={formik.handleSubmit}>
+          <button className='rounded-md bg-green-600 text-white w-24 my-2 mx-1' type="submit" onClick={formik.handleSubmit}>
             Simpan
           </button>
-          <button type="button" onClick={() => props.setUpdate({ ...props.update, open: false })}>
+          <button className='rounded-md bg-red-600 text-white w-24 my-2 mx-1' type="button" onClick={() => props.setUpdate({ ...props.update, open: false })}>
             Cancel
           </button>
         </div>

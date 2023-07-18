@@ -33,7 +33,7 @@ export default function RegionSaga() {
         ) : (
           <>
             <h2>List Region</h2>
-            <button onClick={() => setDisplay(true)}>Add Region</button>
+            <button className='rounded-md bg-green-600 text-white w-24 mx-2' onClick={() => setDisplay(true)}>Add Region</button>
       <table>
         <thead>
           <tr>
@@ -53,8 +53,8 @@ export default function RegionSaga() {
                     <td>{item.regionName}</td>
                   <td>{item.photo}</td>
                   <td>
-                    <button onClick={()=> onDelete(item.regionId)}>Delete</button>
-                    <button onClick={()=> setUpdate({open: true, region: item})}>Edit</button>
+                    <button className='rounded-md bg-red-600 text-white w-20 mx-1' onClick={()=> onDelete(item.regionId)}>Delete</button>
+                    <button className='rounded-md bg-blue-600 text-white w-14 mx-1' onClick={()=> setUpdate({open: true, region: item})}>Edit</button>
                   </td>
                   </tr>
                 </React.Fragment>
